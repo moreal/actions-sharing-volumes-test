@@ -5,9 +5,10 @@ workflow "New workflow" {
 
 action "Action A" {
   uses = "./actions/a"
+  args = ["test-file-a"]
 }
 
 action "Action B" {
   uses = "./actions/b"
-  needs = ["Action A"]
+  needs = ["test-file-b"]
 }
