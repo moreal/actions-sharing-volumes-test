@@ -1,11 +1,12 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Action B"]
+  resolves = ["Action A"]
 }
 
 action "Action A" {
   uses = "./actions/a"
   args = ["test-file-a"]
+  resolves = ["Action B"]
 }
 
 action "Action B" {
